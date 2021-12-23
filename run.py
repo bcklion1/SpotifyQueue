@@ -1,8 +1,9 @@
-# import os
+import os
 from spotify_part import SpotifyClient
 def run():
     # print("f")
-    spotify_client=SpotifyClient("BQBGiIXvzuqZ67mrBKy2Bo83dQzlTTnpAkxoCkLOJ61VtuRlBaZTHUDtmo-8Xl9TK0sHMn50frvd_GmOqWg7bMlpsNnAnNuCH1SFTXCbPYDsF9cp44aVrJ5EbeSlSB2aCUMVYnX4h3ZvbzMs")
+    # print(os.getenv('SPOTIFY_AUTH_TOKEN'))
+    spotify_client=SpotifyClient(os.getenv('SPOTIFY_AUTH_TOKEN'))
     choice=str(input("Song name: "))
     artist=str(input("Artist's name: "))
     if not artist.isspace() and artist:

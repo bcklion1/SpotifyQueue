@@ -73,7 +73,7 @@ class SpotifyClient():
                 "Authorization": f"Bearer {self.apiToken}"
             }
         )
-        print(response)
+        # print(response)
 
     def songNameAndArtist(self,id):
         url=f"https://api.spotify.com/v1/tracks/{id}"
